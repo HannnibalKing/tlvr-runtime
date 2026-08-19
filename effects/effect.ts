@@ -216,7 +216,7 @@ export type CombineEffects<E1 extends Effect, E2 extends Effect> = E1 | E2;
  */
 export function lift<E extends Effect, T>(value: T): Effectful<E, T> {
   return {
-    __effect: undefined as E,
+    __effect: undefined as unknown as E,
     value,
   };
 }
